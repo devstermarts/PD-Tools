@@ -1,26 +1,25 @@
-#N canvas 590 77 348 386 12;
-#X obj 28 253 master_out;
-#X obj 28 80 scaleculator;
-#X floatatom 28 22 5 1 115 1 MIDI\ Base\ Note mbn_init - 0;
-#X floatatom 109 46 5 0 13 1 Scale\ select scl_init - 0;
-#X obj 28 45 t f b;
-#X obj 67 166 bng 35 250 50 0 empty empty empty 17 7 0 10 #00ff04 #000000
-#000000;
-#X obj 67 119 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#N canvas 763 70 341 372 12;
+#X obj 28 229 master_out;
+#X obj 28 56 scaleculator;
+#X floatatom 28 23 5 1 115 2 MIDI\ Note mbn_init - 0;
+#X floatatom 109 22 5 0 13 2 Scale\ select scl_init - 0;
+#X obj 137 142 bng 35 250 50 0 empty empty empty 17 7 0 10 #00ff04
+#000000 #000000;
+#X obj 137 95 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X obj 67 139 metro 200;
-#X text 120 80 <- Open for details;
-#X obj 28 211 blip, f 6;
-#X text 79 211 Some blips to test stuff;
-#X obj 204 281 loadbang;
-#X msg 204 305 \; mbn_init 60 \; scl_init 6 \;;
-#X connect 1 0 9 0;
-#X connect 2 0 4 0;
+#X obj 28 187 blip, f 14;
+#X text 139 187 Some blips to test stuff;
+#X obj 204 257 loadbang;
+#X msg 204 281 \; mbn_init 60 \; scl_init 6 \;;
+#X obj 137 115 metro 90;
+#X connect 1 0 6 0;
+#X connect 1 1 6 1;
+#X connect 2 0 1 0;
 #X connect 3 0 1 1;
-#X connect 4 0 1 0;
-#X connect 5 0 9 1;
-#X connect 6 0 7 0;
-#X connect 7 0 5 0;
-#X connect 9 0 0 0;
-#X connect 9 1 0 1;
-#X connect 11 0 12 0;
+#X connect 4 0 6 2;
+#X connect 5 0 10 0;
+#X connect 6 0 0 0;
+#X connect 6 1 0 1;
+#X connect 8 0 9 0;
+#X connect 10 0 4 0;
+#X coords 0 372 1 371 85 60 0;
