@@ -1,0 +1,34 @@
+#N canvas 675 50 371 151 12;
+#X obj 100 10 inlet;
+#X obj 100 34 i;
+#X obj 135 34 + 1;
+#X obj 100 108 outlet;
+#X obj 210 10 inlet;
+#X text 252 10 Take in meter;
+#X floatatom 210 36 3 1 12 0 Meter - - 0;
+#X obj 150 108 outlet;
+#X text 75 107 1s;
+#X text 197 107 All others;
+#X obj 100 58 mod;
+#X obj 249 34 loadbang;
+#X msg 249 59 4, f 1;
+#X obj 100 82 sel 0;
+#X text 14 9 Take in Bang from main metro, f 11;
+#X obj 224 59 bng 10 250 50 0 empty empty empty 17 7 0 10 #ffffff #ff8300
+#000000;
+#X obj 210 59 bng 10 250 50 0 empty empty empty 17 7 0 10 #ffffff #00faff
+#000000;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 10 0;
+#X connect 2 0 1 1;
+#X connect 4 0 6 0;
+#X connect 6 0 10 1;
+#X connect 10 0 13 0;
+#X connect 11 0 12 0;
+#X connect 12 0 6 0;
+#X connect 13 0 3 0;
+#X connect 13 0 16 0;
+#X connect 13 1 7 0;
+#X connect 13 1 15 0;
+#X coords 0 -1 1 1 75 45 2 165 30;
