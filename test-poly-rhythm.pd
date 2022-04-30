@@ -1,7 +1,7 @@
-#N canvas 475 394 292 245 12;
+#N canvas 475 394 292 257 12;
 #X obj 21 14 component_BPM-engine;
-#X obj 21 116 component_poly-rhythm;
-#X obj 21 153 component_poly-rhythm;
-#X obj 21 190 component_poly-rhythm;
-#X text 152 114 Attn: BPM and note value changes require reset of main
+#X obj 21 136 component_poly-rhythm;
+#X obj 21 173 component_poly-rhythm;
+#X obj 21 210 component_poly-rhythm;
+#X text 152 134 Attn: BPM and note value changes require reset of main
 metro, f 15;

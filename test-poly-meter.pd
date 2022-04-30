@@ -1,8 +1,8 @@
-#N canvas 382 406 285 184 12;
+#N canvas 382 406 285 220 12;
 #X obj 21 14 component_BPM-engine;
-#X obj 21 116 component_poly-meter;
-#X obj 106 116 component_poly-meter;
-#X obj 191 116 component_poly-meter;
+#X obj 21 156 component_poly-meter;
+#X obj 106 156 component_poly-meter;
+#X obj 191 156 component_poly-meter;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 0 0 3 0;
