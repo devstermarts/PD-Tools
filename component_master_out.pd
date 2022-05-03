@@ -1,4 +1,4 @@
-#N canvas 157 75 478 560 12;
+#N canvas 157 75 456 520 12;
 #X obj 10 192 dac~, f 12;
 #X obj 10 104 clip~ -1 1;
 #X obj 91 104 clip~ -1 1;
@@ -13,7 +13,7 @@
 #X msg 274 20 0;
 #X obj 184 101 tgl 15 0 empty empty DAC 17 7 0 10 #fcfcfc #000000 #000000
 0 1;
-#X msg 224 179 \; pd dsp \$1;
+#X msg 304 159 \; pd dsp \$1;
 #X obj 260 59 vu 15 80 empty empty -1 -8 0 10 #404040 #000000 0 0;
 #X obj 283 59 vu 15 80 empty empty -1 -8 0 8 #404040 #000000 1 0;
 #X obj 50 133 env~;
@@ -24,22 +24,23 @@
 #X obj 91 20 inlet~;
 #X obj 91 76 *~ 0.6;
 #X obj 10 76 *~ 0.6;
-#X obj 217 521 writesf~ 2;
-#X msg 231 471 start;
-#X msg 185 471 stop;
-#X msg 217 415 open -bytes 4 \$1;
-#X msg 217 251 dir;
-#X obj 217 275 pdcontrol;
+#X obj 216 481 writesf~ 2;
+#X msg 230 431 start;
+#X msg 184 431 stop;
+#X msg 216 375 open -bytes 4 \$1;
+#X msg 216 211 dir;
+#X obj 216 235 pdcontrol;
 #X obj 184 126 tgl 15 0 empty empty Rec. 17 7 0 10 #00faff #000000
 #000000 0 1;
-#X obj 185 446 sel 0, f 7;
-#X obj 217 299 makefilename %s/record_%%d.wav;
-#X msg 217 323 set \$1;
-#X obj 217 392 makefilename;
-#X obj 230 348 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 184 406 sel 0, f 7;
+#X obj 216 259 makefilename %s/record_%%d.wav;
+#X msg 216 283 set \$1;
+#X obj 216 352 makefilename;
+#X obj 229 308 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 185 223 t f b;
-#X obj 230 368 random 1000;
+#X obj 229 328 random 1000;
+#X obj 184 163 t f f;
+#X obj 216 187 sel 1;
 #X connect 1 0 0 0;
 #X connect 1 0 14 0;
 #X connect 1 0 22 0;
@@ -68,15 +69,16 @@
 #X connect 25 0 22 0;
 #X connect 26 0 27 0;
 #X connect 27 0 30 0;
-#X connect 28 0 34 0;
+#X connect 28 0 35 0;
 #X connect 29 0 24 0;
 #X connect 29 1 23 0;
 #X connect 30 0 31 0;
 #X connect 31 0 32 0;
 #X connect 31 0 33 0;
 #X connect 32 0 25 0;
-#X connect 33 0 35 0;
-#X connect 34 0 29 0;
-#X connect 34 1 26 0;
-#X connect 35 0 32 0;
+#X connect 33 0 34 0;
+#X connect 34 0 32 0;
+#X connect 35 0 29 0;
+#X connect 35 1 36 0;
+#X connect 36 0 26 0;
 #X coords 0 -1 1 1 150 100 2 175 50;
